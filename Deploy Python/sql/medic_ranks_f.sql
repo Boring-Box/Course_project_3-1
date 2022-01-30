@@ -1,0 +1,14 @@
+INSERT INTO medic_ranks (name) VALUES ('Chief nurse');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Surgical Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Therapeutic Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Otolaryngology Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Admission Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Urology Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Orthopedics and Traumatology Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Cardiology Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Neurological Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Gynecological');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Pediatric Department');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Intensive Care Unit');
+INSERT INTO medic_ranks (name) VALUES ('Head nurse of the Operating Unit');
+INSERT INTO medic_ranks (name) VALUES ('Head ambalance paramedic');

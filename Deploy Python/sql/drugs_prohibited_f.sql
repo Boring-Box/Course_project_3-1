@@ -1,0 +1,1 @@
+INSERT INTO drugs_prohibited (drug_id, medic_rank_id) VALUES (2, 2)

@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.define "db-srv-1"
+  config.vm.hostname = "db-srv-1"
+  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 5432, host: 2345
+ 
+  config.vm.synced_folder "./", "/vagrant_data"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "db-srv-1"
+    vb.memory = "1024"
+  end
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
+end

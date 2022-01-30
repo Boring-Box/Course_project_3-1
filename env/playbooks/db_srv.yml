@@ -1,0 +1,33 @@
+---
+- name: Provision Vagrant machine
+  hosts: localhost
+  tasks:
+    - name: Create and run VM (based on ../Vagrantfile)
+      command: vagrant up
+
+- name: Install postgresql-13 on db-srv-1
+  hosts: db-srv-1
+  become: Yes
+  tasks:
+    - name: Create the file repository configuration
+      shell: sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    
+    - name: Import the repository signing key
+      shell: wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    
+    - name: Install the latest version of PostgreSQL
+      apt: name=postgresql-13 update_cache=Yes cache_valid_time=3600
+
+    - name: Create new user "dbadmin"
+      become: Yes
+      command: useradd -p dbadmin -s /bin/bash -m dbadmin
+    
+    - name: Create new PostgreSQL user "dbadmin"
+      become: Yes
+      become_user: postgres
+      command: createuser -dsr --replication dbadmin
+
+    - name: Create dbadmin_db
+      become: Yes
+      become_user: postgres
+      command: createdb -O dbadmin dbadmin_db
