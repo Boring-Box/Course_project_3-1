@@ -29,7 +29,7 @@ deploy_files = {
   # 'drug_supplier_f': abspath('./sql/drug_supplier_f.sql'),
   # 'drug_manufacturer_f': abspath('./sql/drug_manufacturer_f.sql'),
   # 'issued_to_medic_f': abspath('./sql/issued_to_medic_f.sql'),
-  # 'users_and_privileges': abspath('./sql/users_and_privileges.sql'),
+  'users_and_privileges': abspath('./sql/users_and_privileges.sql'),
 }
 for key, value in deploy_files.items():
   deploy_files[key] = value.replace('\\', '/')

@@ -1,1 +1,42 @@
-Nothing here at the moment
+  This repository contains all necessary files to recreate my app and test
+environment for course project on the topic "Hospital database designing. Drugs
+supply subsystem".
+
+
+  [ What is needed to recreate this project? ]
+
+  To deploy testing environment:
+    1) VirtualBox (version 6.1.30r148432 was used)
+    2) Vagrant (version 2.2.19 was used)
+    3) Ansible (version 2.12.1 was used)
+    4) Python3.8 or newer (version 3.10 was used)
+
+  To start the unbuilded application:
+    1) Python3.8 or newer (version 3.10 was used)
+    2) Python librares: Psycopg2 and PyQt5
+
+
+  [ How to deploy testing environment? ]
+
+  To deploy testing enviroment you need to launch "db_srv.yml" playbook in the
+"CPr/env/playbooks/" directory by using the "ansible-playbook db_srv.yml"
+command. After you entering the command Ansible will creates virtual machine,
+installs Postgresql and prepares it for work. After that you can start
+application and do some tests. That's all.
+  You can also choose half-automatic way to deploy testing enviroment whithout
+using Ansible, Vagrant, etc. All files that can help you for this way are
+situated in the "CPr/Deploy Python/" folder. The Deploy5.py script creates
+database and fills it by data but it's requre some calibration and everything
+else is up to you (choice what kind of host you will use to deploy the
+database, roles creating, configs editing, etc). Good luck.
+
+  [ How to start the application? ]
+
+  Important: Before starting the unbuilded application at the first time
+             you need to run "CPr/Application/recompileWindows.py" file.
+
+  Execute the "CPr/Application/main.py" file to run unbuilded application.
+
+  To launch builded application you need nothing. The builded executable file
+of this application you can find at the "CPr/Application/dist" folder (it's
+only for Linux at the moment).
