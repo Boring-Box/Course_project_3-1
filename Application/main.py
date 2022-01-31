@@ -24,7 +24,8 @@ class LoginWindow(QDialog):
     password = self.ui.password_fld.text()
     host = self.ui.host_fld.text()
     if db_name!='' or user_name!='' or password!='' or host!='':
-      authDict.update({'dbname': db_name, 'user': user_name, 'password': password, 'host': host})
+      host_ip, host_port = host.split(':')
+      authDict.update({'dbname': db_name, 'user': user_name, 'password': password, 'host': host_ip, 'port': host_port})
       if connectToDB(authDict) == -1:
         error = Troubleshoot()
         error.showError("[!] FAIL")
