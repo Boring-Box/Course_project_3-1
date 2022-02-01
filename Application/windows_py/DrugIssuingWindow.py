@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/DrugIssuingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/DrugIssuingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_DrugIssuingWindow(object):
         DrugIssuingWindow.setMinimumSize(QtCore.QSize(420, 220))
         DrugIssuingWindow.setMaximumSize(QtCore.QSize(420, 220))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         DrugIssuingWindow.setWindowIcon(icon)
         DrugIssuingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.medic_fname_fld = QtWidgets.QLineEdit(DrugIssuingWindow)

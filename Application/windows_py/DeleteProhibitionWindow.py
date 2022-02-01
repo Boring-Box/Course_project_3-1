@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/DeleteProhibitionWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/DeleteProhibitionWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_DeleteProhibitionWindow(object):
         DeleteProhibitionWindow.setMinimumSize(QtCore.QSize(250, 100))
         DeleteProhibitionWindow.setMaximumSize(QtCore.QSize(250, 100))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         DeleteProhibitionWindow.setWindowIcon(icon)
         DeleteProhibitionWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.label_4 = QtWidgets.QLabel(DeleteProhibitionWindow)

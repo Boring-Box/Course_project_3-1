@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/ManageManufacturersWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/ManageManufacturersWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_ManageManufacturersWindow(object):
         ManageManufacturersWindow.setMinimumSize(QtCore.QSize(990, 610))
         ManageManufacturersWindow.setMaximumSize(QtCore.QSize(1280, 610))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         ManageManufacturersWindow.setWindowIcon(icon)
         ManageManufacturersWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.tableWidget = QtWidgets.QTableWidget(ManageManufacturersWindow)

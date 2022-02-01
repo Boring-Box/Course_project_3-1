@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/MainWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(830, 525))
         MainWindow.setMaximumSize(QtCore.QSize(830, 525))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -196,13 +196,13 @@ class Ui_MainWindow(object):
         self.DogLabel.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.DogLabel.setFrameShadow(QtWidgets.QFrame.Plain)
         self.DogLabel.setText("")
-        self.DogLabel.setPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../dog.gif"))
+        self.DogLabel.setPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../dog.gif"))
         self.DogLabel.setScaledContents(True)
         self.DogLabel.setObjectName("DogLabel")
         self.nyan_dog_label = QtWidgets.QLabel(self.centralwidget)
         self.nyan_dog_label.setGeometry(QtCore.QRect(100, 30, 701, 171))
         self.nyan_dog_label.setText("")
-        self.nyan_dog_label.setPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../nyan_dog.gif"))
+        self.nyan_dog_label.setPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../nyan_dog.gif"))
         self.nyan_dog_label.setScaledContents(False)
         self.nyan_dog_label.setObjectName("nyan_dog_label")
         self.dogbackground = QtWidgets.QLabel(self.centralwidget)

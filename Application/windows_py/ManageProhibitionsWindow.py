@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/ManageProhibitionsWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/ManageProhibitionsWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_ManageProhibitionsWindow(object):
         ManageProhibitionsWindow.setMinimumSize(QtCore.QSize(1280, 610))
         ManageProhibitionsWindow.setMaximumSize(QtCore.QSize(1280, 610))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         ManageProhibitionsWindow.setWindowIcon(icon)
         ManageProhibitionsWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.tableWidget = QtWidgets.QTableWidget(ManageProhibitionsWindow)

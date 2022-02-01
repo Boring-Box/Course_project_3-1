@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/DelDrugWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/DelDrugWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -23,7 +23,7 @@ class Ui_DrugDelWindow(object):
         DrugDelWindow.setMinimumSize(QtCore.QSize(200, 100))
         DrugDelWindow.setMaximumSize(QtCore.QSize(200, 100))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         DrugDelWindow.setWindowIcon(icon)
         DrugDelWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.del_drug_btn = QtWidgets.QPushButton(DrugDelWindow)

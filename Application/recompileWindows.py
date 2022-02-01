@@ -1,35 +1,16 @@
-import os, subprocess
+import subprocess, os
 
-files = [ "MainWindow",
-          "ManageDrugsWindow",
-          "IssueLogWindow",
-          "DrugUpdatingWindow",
-          "DrugAddingWindow",
-          "DrugIssuingWindow",
-          "DelDrugWindow",
-          "LoginWindow",
-          "ManageProhibitionsWindow",
-          "ProhibitionAddingWindow",
-          "ManageManufacturersWindow",
-          "ManufacturerAddingWindow",
-          "ManufacturerUpdatingWindow",
-          "ManageSuppliersWindow",
-          "SupplierAddingWindow",
-          "SupplierUpdatingWindow",
-          "DeliveryLogWindow",
-          "DeleteProhibitionWindow"
-          ]
+this_script_dir = __file__.replace(os.path.basename(__file__), '')
+abs_ui_dir_path =  this_script_dir + 'windows_ui/'
+abs_py_dir_path = this_script_dir + 'windows_py/'
 
-ui_folder_path = os.path.abspath('./ui').replace('\\', '/') + '/'
-py_folder_path = os.path.abspath('./').replace('\\', '/') + '/'
-for file_name in files:
-  ui_file_path = ui_folder_path + file_name + '.ui'
-  py_file_path = py_folder_path + file_name + '.py'
-  # print(ui_file_path)
-  # print(py_file_path)
+files_list = os.listdir(abs_ui_dir_path)
+
+for file_name in files_list:
+  abs_ui_file_path = abs_ui_dir_path + file_name
+  abs_py_file_path = abs_py_dir_path + file_name.replace('.ui', '.py')
   try:
-    command = ["pyuic5", "-x", ui_file_path, "-o", py_file_path]
-    # print(command)
+    command = ["pyuic5", "-x", abs_ui_file_path, "-o", abs_py_file_path]
     subprocess.call(command)
   except Exception as error:
     print(error)

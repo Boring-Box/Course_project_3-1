@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/DrugUpdatingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/DrugUpdatingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_DrugUpdatingWindow(object):
         DrugUpdatingWindow.setMinimumSize(QtCore.QSize(550, 350))
         DrugUpdatingWindow.setMaximumSize(QtCore.QSize(550, 350))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         DrugUpdatingWindow.setWindowIcon(icon)
         DrugUpdatingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.label_4 = QtWidgets.QLabel(DrugUpdatingWindow)

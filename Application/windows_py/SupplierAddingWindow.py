@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/SupplierAddingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/SupplierAddingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -19,7 +19,7 @@ class Ui_SupplierAddingWindow(object):
         SupplierAddingWindow.setMinimumSize(QtCore.QSize(550, 320))
         SupplierAddingWindow.setMaximumSize(QtCore.QSize(550, 320))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         SupplierAddingWindow.setWindowIcon(icon)
         SupplierAddingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.add_supplier_btn = QtWidgets.QPushButton(SupplierAddingWindow)

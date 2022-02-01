@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/ManufacturerUpdatingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/ManufacturerUpdatingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_ManufacturerUpdatingWindow(object):
         ManufacturerUpdatingWindow.setMinimumSize(QtCore.QSize(550, 350))
         ManufacturerUpdatingWindow.setMaximumSize(QtCore.QSize(550, 350))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         ManufacturerUpdatingWindow.setWindowIcon(icon)
         ManufacturerUpdatingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.manufacturer_id_spnbox = QtWidgets.QSpinBox(ManufacturerUpdatingWindow)

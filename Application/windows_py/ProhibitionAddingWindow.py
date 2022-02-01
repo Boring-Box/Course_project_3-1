@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/ProhibitionAddingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/ProhibitionAddingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -18,7 +18,7 @@ class Ui_ProhibitionAddingWindow(object):
         ProhibitionAddingWindow.setMinimumSize(QtCore.QSize(420, 160))
         ProhibitionAddingWindow.setMaximumSize(QtCore.QSize(420, 160))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         ProhibitionAddingWindow.setWindowIcon(icon)
         ProhibitionAddingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.rank_cbox = QtWidgets.QComboBox(ProhibitionAddingWindow)

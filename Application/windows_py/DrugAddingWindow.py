@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/DrugAddingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/DrugAddingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -19,7 +19,7 @@ class Ui_DrugAddingWindow(object):
         DrugAddingWindow.setMinimumSize(QtCore.QSize(580, 410))
         DrugAddingWindow.setMaximumSize(QtCore.QSize(580, 410))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         DrugAddingWindow.setWindowIcon(icon)
         DrugAddingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.add_drug_btn = QtWidgets.QPushButton(DrugAddingWindow)

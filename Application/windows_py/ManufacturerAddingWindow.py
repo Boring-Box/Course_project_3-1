@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/ManufacturerAddingWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/ManufacturerAddingWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -22,7 +22,7 @@ class Ui_ManufacturerAddingWindow(object):
         font.setPointSize(8)
         ManufacturerAddingWindow.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         ManufacturerAddingWindow.setWindowIcon(icon)
         ManufacturerAddingWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.add_manufacturer_btn = QtWidgets.QPushButton(ManufacturerAddingWindow)

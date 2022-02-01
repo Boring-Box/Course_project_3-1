@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/ui/LoginWindow.ui'
+# Form implementation generated from reading ui file '/home/kaireen/Documents/CPr/Application/windows_ui/LoginWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,11 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
         LoginWindow.setObjectName("LoginWindow")
+        LoginWindow.setWindowModality(QtCore.Qt.NonModal)
         LoginWindow.resize(350, 260)
         LoginWindow.setMinimumSize(QtCore.QSize(350, 260))
         LoginWindow.setMaximumSize(QtCore.QSize(350, 260))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/kaireen/Documents/CPr/Application/windows_ui/../media/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         LoginWindow.setWindowIcon(icon)
         LoginWindow.setStyleSheet("background-color: rgb(32, 178, 170);")
         self.username_fld = QtWidgets.QLineEdit(LoginWindow)
@@ -27,7 +28,7 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         self.username_fld.setFont(font)
         self.username_fld.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
+"color: rgb(8, 8, 8);\n"
 "border-radius: 15px;")
         self.username_fld.setAlignment(QtCore.Qt.AlignCenter)
         self.username_fld.setObjectName("username_fld")
@@ -37,8 +38,9 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         self.dbname_fld.setFont(font)
         self.dbname_fld.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
+"color: rgb(8, 8, 8);\n"
 "border-radius: 15px;")
+        self.dbname_fld.setMaxLength(50)
         self.dbname_fld.setAlignment(QtCore.Qt.AlignCenter)
         self.dbname_fld.setObjectName("dbname_fld")
         self.password_fld = QtWidgets.QLineEdit(LoginWindow)
@@ -47,7 +49,7 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         self.password_fld.setFont(font)
         self.password_fld.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
+"color: rgb(8, 8, 8);\n"
 "border-radius: 15px;")
         self.password_fld.setMaxLength(16)
         self.password_fld.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -81,8 +83,9 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         self.host_fld.setFont(font)
         self.host_fld.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
+"color: rgb(8, 8, 8);\n"
 "border-radius: 15px;")
+        self.host_fld.setMaxLength(20)
         self.host_fld.setAlignment(QtCore.Qt.AlignCenter)
         self.host_fld.setObjectName("host_fld")
 
@@ -92,15 +95,15 @@ class Ui_LoginWindow(object):
     def retranslateUi(self, LoginWindow):
         _translate = QtCore.QCoreApplication.translate
         LoginWindow.setWindowTitle(_translate("LoginWindow", "Login Window"))
-        self.username_fld.setText(_translate("LoginWindow", "apenko"))
+        self.username_fld.setText(_translate("LoginWindow", "pharmacy_worker"))
         self.username_fld.setPlaceholderText(_translate("LoginWindow", "Username"))
         self.dbname_fld.setText(_translate("LoginWindow", "pharmacy_db"))
-        self.dbname_fld.setPlaceholderText(_translate("LoginWindow", "Data base name"))
-        self.password_fld.setText(_translate("LoginWindow", "apenko"))
+        self.dbname_fld.setPlaceholderText(_translate("LoginWindow", "Database name"))
+        self.password_fld.setText(_translate("LoginWindow", "standard"))
         self.password_fld.setPlaceholderText(_translate("LoginWindow", "Password"))
         self.permit_btn.setText(_translate("LoginWindow", "Permit"))
         self.host_fld.setText(_translate("LoginWindow", "localhost"))
-        self.host_fld.setPlaceholderText(_translate("LoginWindow", "Host"))
+        self.host_fld.setPlaceholderText(_translate("LoginWindow", "Host:port"))
 
 
 if __name__ == "__main__":
