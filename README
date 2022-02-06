@@ -18,17 +18,25 @@ supply subsystem".
 
   [ How to deploy testing environment? ]
 
-  To deploy testing enviroment you need to launch "db_srv.yml" playbook in the
-"CPr/env/playbooks/" directory by using the "ansible-playbook db_srv.yml"
-command. After you entering the command Ansible will creates virtual machine,
-installs Postgresql and prepares it for work. After that you can start
-application and do some tests. That's all.
-  You can also choose half-automatic way to deploy testing enviroment whithout
+  To deploy testing enviroment you need to launch "deploy_db_srv_for_localhost.yml"
+or "deploy_db_srv_for_dedic.yml" playbook (on depence where you need to deploy
+database server) in the "CPr/env/playbooks/" directory by using the
+"ansible-playbook <playbook_name.yml>" command. After you entering the command
+Ansible will creates a virtual machine (only if the playbook for localhost
+deploying has been used), installs Postgresql and prepares it for
+work. After that you can start application and do some tests. That's all.
+
+  NOTE: "deploy_db_for_dedic.yml" playbook also contains firewall's configuration
+        commands. So if you don't want firewall configuration to be changed
+        you need to delete or comment the responsible lines in the playbook.
+
+  You can also choose half-automatic way to deploy the testing enviroment whithout
 using Ansible, Vagrant, etc. All files that can help you for this way are
 situated in the "CPr/Deploy Python/" folder. The Deploy5.py script creates
 database and fills it by data but it's requre some calibration and everything
 else is up to you (choice what kind of host you will use to deploy the
 database, roles creating, configs editing, etc). Good luck.
+
 
   [ How to start the application? ]
 
@@ -40,3 +48,11 @@ database, roles creating, configs editing, etc). Good luck.
   To launch builded application you need nothing. The builded executable file
 of this application you can find at the "CPr/Application/dist" folder (it's
 only for Linux at the moment).
+
+  To connect to the database you need to enter IP and port of your DB server in the
+last field instead of "localhost". It must be a string of the following format:
+  192.168.56.12:2345
+
+  NOTE: By default PostgreSQL server is configured to work with port 2345 (it is in
+        the "CPr/env/playbooks/files/postgresql.conf") and to accept incoming
+        connections from any adress (it is in "CPr/env/playbooks/files/pg_hba.conf")

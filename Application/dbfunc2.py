@@ -1,17 +1,12 @@
 import psycopg2
 
-# authDict = {'dbname':'pharmacy_db',
-#             'user':'apenko',
-#             "password":'apenko',
-#             'host':'localhost',
-#             'sslmode':'require'}
-
 def connectToDB(authDict):
   try:
     connection = psycopg2.connect(dbname=authDict['dbname'],
                                   user=authDict['user'],
                                   password=authDict['password'],
-                                  host=authDict['host'])
+                                  host=authDict['host'],
+                                  port=authDict['port'])
     connection.autocommit = True
     return connection
   except:

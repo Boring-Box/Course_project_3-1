@@ -1,0 +1,93 @@
+---
+- name: Install postgresql-13 on db-srv-1 (dedicated)
+  hosts: db-srv-1-dedicated
+  become: Yes
+  vars:
+    postgresql_conf: '/etc/postgresql/13/main/postgresql.conf'
+    pg_hba_conf: '/etc/postgresql/13/main/pg_hba.conf'
+  tasks:
+    - name: Create the file repository configuration
+      shell: sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    
+    - name: Import the repository signing key
+      shell: wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+    
+    - name: Install the 13'th version of PostgreSQL
+      apt: name=postgresql-13 update_cache=Yes
+
+    - name: Create new user "dbadmin"
+      command: useradd -p dbadmin -s /bin/bash -m dbadmin
+    
+    - name: Create new PostgreSQL user "dbadmin"
+      become_user: postgres
+      command: createuser -dsr --replication dbadmin
+
+    - name: Create "dbadmin_db" database
+      become_user: postgres
+      command: createdb -O dbadmin dbadmin_db
+
+    - name: Create "pharmacy_db" database
+      become_user: dbadmin
+      command: createdb -O dbadmin pharmacy_db
+    
+    - name: Copy "pharmacy_db.sql" file to /tmp
+      copy: src='files/pharmacy_db.sql' dest='/tmp' owner=dbadmin mode=0600
+
+    - name: Run "pharmacy_db.sql" script
+      become_user: dbadmin
+      command: psql -f /tmp/pharmacy_db.sql -d pharmacy_db
+    
+    - name: Copy "postgresql.conf" file
+      copy: src='files/postgresql.conf' dest={{ postgresql_conf }} owner=postgres mode=0644
+    
+    - name: Copy "pg_hba.conf" file
+      copy: src='files/pg_hba.conf' dest={{ pg_hba_conf }} owner=postgres mode=0640
+    
+    - name: Restart postgresql.service
+      service: name=postgresql state=restarted
+    
+    - name: Find my public ip
+      ignore_errors: Yes
+      command: "curl ifconfig.me/ip"
+      register: ip_response
+    
+    - name: Allow related and established connections
+      ansible.builtin.iptables:
+        chain: INPUT
+        ctstate: ESTABLISHED,RELATED
+        jump: ACCEPT
+
+    - name: Allow new SSH connections
+      ansible.builtin.iptables:
+        chain: INPUT
+        protocol: tcp
+        destination_port: 22
+        ctstate: NEW
+        syn: match
+        jump: ACCEPT
+        comment: Accept new SSH connections.
+
+    - name: Allow tcp 2345
+      ansible.builtin.iptables:
+        chain: INPUT
+        protocol: tcp
+        destination_port: 2345
+        ctstate: NEW
+        syn: match
+        jump: ACCEPT
+        comment: Accept new connections to DB.
+    
+    - name: Deny another connections
+      ansible.builtin.iptables:
+        chain: INPUT
+        ctstate: NEW
+        jump: DROP    
+
+    - name: Show local IP addresses.
+      debug:
+        msg: "Local IP: {{ ansible_all_ipv4_addresses }}"
+    
+    - name:
+      ignore_errors: Yes
+      debug:
+        msg: "Global IP: {{ ip_response.stdout }}"

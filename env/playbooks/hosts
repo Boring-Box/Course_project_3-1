@@ -1,2 +1,5 @@
-[db_srv]
-db-srv-1 ansible_host=127.0.0.1 ansible_port=2222 ansible_private_key_file=../.vagrant/machines/db-srv-1/virtualbox/private_key
+[db_srv_local]
+db-srv-1-local ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_private_key_file=../.vagrant/machines/db-srv-1/virtualbox/private_key
+
+[db_srv_dedicated]
+db-srv-1-dedicated ansible_host=34.85.213.219 ansible_port=22 ansible_user=kaireen ansible_private_key_file=/home/kaireen/.ssh/gcp-db-srv-1

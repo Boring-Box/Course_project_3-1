@@ -4,7 +4,7 @@ authDict = {'dbname':'dbname',
             'user':'username',
             'password':'password',
             'host':'localhost',
-            'port': 5432,
+            'port': '2345',
             'conn_state': False,
             'sslmode':'require'}
 
@@ -25,7 +25,10 @@ class LoginWindow(QDialog):
     host = self.ui.host_fld.text()
     if db_name!='' or user_name!='' or password!='' or host!='':
       host_ip, host_port = host.split(':')
+      print(host_ip)
+      print(host_port)
       authDict.update({'dbname': db_name, 'user': user_name, 'password': password, 'host': host_ip, 'port': host_port})
+      print(authDict)
       if connectToDB(authDict) == -1:
         error = Troubleshoot()
         error.showError("[!] FAIL")
