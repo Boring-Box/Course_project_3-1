@@ -18,13 +18,15 @@ supply subsystem".
 
   [ How to deploy testing environment? ]
 
-  To deploy testing enviroment you need to launch "deploy_db_srv_for_localhost.yml"
-or "deploy_db_srv_for_dedic.yml" playbook (on depence where you need to deploy
-database server) in the "CPr/env/playbooks/" directory by using the
-"ansible-playbook <playbook_name.yml>" command. After you entering the command
-Ansible will creates a virtual machine (only if the playbook for localhost
-deploying has been used), installs Postgresql and prepares it for
-work. After that you can start application and do some tests. That's all.
+  To deploy testing enviroment you need to enter the parameters specific to
+your server in the "CPr/env/playbooks/hosts" file (needs only for dedic. server)
+and to launch "deploy_db_srv_for_localhost.yml" or "deploy_db_srv_for_dedic.yml"
+playbook (on depence where you need to deploy database server) in the
+"CPr/env/playbooks/" directory by using the "ansible-playbook <playbook_name.yml>"
+command. After you entering the command Ansible will creates a virtual machine
+(only if the playbook for localhost deploying has been used), installs Postgresql
+and prepares it for work. After that you can start application and do some tests.
+That's all.
 
   NOTE: "deploy_db_for_dedic.yml" playbook also contains firewall's configuration
         commands. So if you don't want firewall configuration to be changed
