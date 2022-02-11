@@ -1,0 +1,10 @@
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('MEGA PHARM', '"EARTH" PLANET', 'megapharm@megapharm.com');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('AKADEMPHARM', 'BELARUS', '220141, Minsk, tel/fax (017) 263-67-70');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('AKONITPHARMA', 'BELARUS', '210023, Vitebsk, tel +375-212-60-15-69, +375-212-60-15-69');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('AMANTISMED', 'BELARUS', '223141, Logoysk');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('AMELIYABEL', 'BELARUS', '220035, Minsk, (017) 204-87-13');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('AMATEG', 'BELARUS', '222120, Borisov, tel/fax +375 (177) 76-83-96');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('BELASEPTICA', 'BELARUS', '223043, Minsk region, Tsnyanka village, tel +375-17-500-33-06, tel/fax (017) 500-33-11');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('BORISOV PLANT OF MEDICAL PREPARATIONS', 'BELARUS', '222120, Borisov, +375-17-773-22-61');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('NESVIZH PLANT OF MEDICAL PREPARATIONS', 'BELARUS', 'Some contact info');
+INSERT INTO manufacturers (name, country, contact_info) VALUES ('PHARMATECH', 'BELARUS', 'Some contact info');

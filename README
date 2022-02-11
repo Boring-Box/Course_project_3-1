@@ -34,7 +34,7 @@ That's all.
 
   You can also choose half-automatic way to deploy the testing enviroment whithout
 using Ansible, Vagrant, etc. All files that can help you for this way are
-situated in the "CPr/Deploy Python/" folder. The Deploy5.py script creates
+situated in the "CPr/HM_Deployment/" folder. The Deploy5.py script creates
 database and fills it by data but it's requre some calibration and everything
 else is up to you (choice what kind of host you will use to deploy the
 database, roles creating, configs editing, etc). Good luck.
